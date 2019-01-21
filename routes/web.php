@@ -13,5 +13,4 @@
 
 Route::feeds();
 Route::get('/', 'HomeController');
-Route::get('about', 'HomeController');
 Route::get('/{slug}', 'PostController')->where('slug', '[a-z0-9\-]+');
