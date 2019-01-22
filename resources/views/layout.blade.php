@@ -7,7 +7,9 @@
         <!-- CSRF Token -->
         <meta name="csrf-token" content="{{ csrf_token() }}" />
 
-        <title>{{ config('app.name', 'Laravel') }}</title>
+        <title>@yield('title', 'bernar.do')</title>
+
+        @yield('seo')
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono|IBM+Plex+Serif:400,400i,600,700&subset=latin-ext" rel="stylesheet" />

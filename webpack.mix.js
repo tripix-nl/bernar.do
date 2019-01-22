@@ -26,7 +26,7 @@ class TailwindExtractor {
 }
 
 mix
-    //.copy('resources/images', 'public/images')
+    .copy('resources/images', 'public/images')
     //.js('resources/js/app.js', 'public/js')
     .less('resources/less/app.less', 'public/css')
     .options({
