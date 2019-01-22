@@ -19,6 +19,5 @@
     <meta name="twitter:description" content="{{ $post->summary }}" />
     <meta name="twitter:title" content="{{ $post->title }} - bernar.do" />
     <meta name="twitter:site" content="@bernardohulsman" />
-    <meta name="twitter:image" content="{{ asset('images/bernar.do-twitter-image-1024.png') }}" />
     <meta name="twitter:creator" content="@bernardohulsman" />
 @endsection
