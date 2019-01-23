@@ -34,6 +34,7 @@
             @yield('content')
         </div>
         <div class="p-4 text-center text-sm">
+            hosted by <a href="https://m.do.co/c/74b3fe7f3bfa" class="inline-block text-white no-underline hover:underline" target="_blank">digitalocean.com</a> •
             <a href="https://tripix.nl" class="inline-block text-white no-underline hover:underline" target="_blank">tripix.nl</a> •
             <a href="{{ url('feed') }}" class="inline-block text-white no-underline hover:underline" target="_blank">rss</a>
         </div>
