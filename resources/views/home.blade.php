@@ -5,7 +5,7 @@
         <div>
             @foreach($posts as $post)
                 <div class="mb-8 pb-8 {{ $loop->last ? '' : 'border-b-2 border-grey-darker' }}">
-                    <h2 class="mb-2 font-semibold text-4xl">
+                    <h2 class="mb-2 font-semibold text-4xl leading-none">
                         <a href="{{ url($post->slug) }}" class="block no-underline text-white hover:text-blue-lighter">
                             {{ $post->title }}
                         </a>

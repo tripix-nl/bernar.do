@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Markdown\ExternalLinkProcessor;
 use Illuminate\Support\ServiceProvider;
 use League\CommonMark\Block\Element\FencedCode;
 use League\CommonMark\Block\Element\IndentedCode;
@@ -35,6 +36,7 @@ class AppServiceProvider extends ServiceProvider
             ->needs(CommonMarkConverter::class)
             ->give(function () {
                 $environment = Environment::createCommonMarkEnvironment();
+                $environment->addDocumentProcessor(new ExternalLinkProcessor());
                 $environment->addBlockRenderer(FencedCode::class, new FencedCodeRenderer(['html', 'php', 'js']));
                 $environment->addBlockRenderer(IndentedCode::class, new IndentedCodeRenderer(['html', 'php', 'js']));
                 return new CommonMarkConverter(['safe' => true], $environment);
