@@ -18,8 +18,8 @@
         @include('feed::links')
     </head>
     <body class="flex flex-col h-screen bg-grey-darkest font-sans font-normal leading-normal text-white">
-        <div class="container mx-auto mb-8">
-            <div class="flex justify-between pt-4">
+        <div class="mb-4 p-4">
+            <div class="container mx-auto flex justify-between">
                 <a href="{{ url('/') }}" class="text-xl font-semibold text-white no-underline hover:text-blue-lighter">bernar.do</a>
                 <div>
                     <a href="{{ url('/') }}" class="inline-block text-white no-underline hover:underline">Home</a>
