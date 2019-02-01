@@ -35,9 +35,7 @@ class NoAuthCacheProfile implements CacheProfile
 
     public function cacheRequestUntil(Request $request): DateTime
     {
-        return Carbon::now()->addMinutes(
-            config('responsecache.cache_lifetime_in_minutes')
-        );
+        return Carbon::now()->addMinutes(config('responsecache.cache_lifetime_in_minutes'));
     }
 
     public function cacheNameSuffix(Request $request): string

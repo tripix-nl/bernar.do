@@ -17,12 +17,11 @@ class ExternalLinkProcessor implements DocumentProcessorInterface, Configuration
         $this->config = $configuration;
     }
 
-    public function processDocument(Document $document) : void
+    public function processDocument(Document $document): void
     {
         $walker = $document->walker();
 
-        while ($event = $walker->next()) {
-
+        while (($event = $walker->next())) {
             $node = $event->getNode();
 
             if (!($node instanceof Link) || !$event->isEntering()) {
@@ -37,7 +36,7 @@ class ExternalLinkProcessor implements DocumentProcessorInterface, Configuration
         }
     }
 
-    private function isUrlExternal(string $url) : bool
+    private function isUrlExternal(string $url): bool
     {
         if (!preg_match('/^https?:\/\//', $url)) {
             return false;
