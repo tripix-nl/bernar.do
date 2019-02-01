@@ -1,6 +1,6 @@
 ---
 title: Vuex store with normalized data using a Laravel backend
-date: 2019-01-28
+date: 2019-02-01
 summary: State management in Vue can be done using just an object as a store, but when you're building a bigger application Vuex is a more mature solution. Using normalized data will make it a lot easier. I'll try and give you a sense of how to get started.
 ---
 
