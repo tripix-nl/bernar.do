@@ -9,6 +9,6 @@ class HomeController extends Controller
 {
     public function __invoke(Request $request, Sheets $sheets)
     {
-        return view('home', ['posts' => $sheets->collection('posts')->all()]);
+        return view('home', ['posts' => $sheets->collection('posts')->all()->sortByDesc('date')]);
     }
 }
