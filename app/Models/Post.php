@@ -11,6 +11,11 @@ use Spatie\Sheets\Sheet;
 
 class Post extends Sheet implements Feedable
 {
+    protected $slug;
+    protected $title;
+    protected $summary;
+    protected $date;
+
     public function toFeedItem(): FeedItem
     {
         return FeedItem::create([
