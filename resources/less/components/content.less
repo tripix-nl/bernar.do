@@ -6,7 +6,7 @@
         @apply text-white;
 
         &:hover {
-            @apply text-blue-lighter;
+            @apply text-blue-300;
         }
     }
 
@@ -30,9 +30,9 @@
     }
 
     p > code {
-        @apply inline-block px-1 rounded-sm border;
-        background-color: #364049;
-        border-color: #303941;
+        @apply inline-block px-1 rounded border bg-gray-700 border-gray-900;
+        //background-color: #364049;
+        //border-color: #303941;
     }
 
     > p {
@@ -40,7 +40,7 @@
     }
 
     blockquote {
-        @apply mb-8 p-4 pl-8 border-l-8 border-grey-dark bg-grey text-black italic text-xl;
+        @apply mb-8 p-4 pl-8 border-l-8 border-gray-600 bg-gray-500 text-black italic text-xl;
 
         p + p {
             @apply mb-8;
