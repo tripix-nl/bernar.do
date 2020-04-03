@@ -1,6 +1,6 @@
 ---
 title: Laravel Scout index operations only when updating searchable fields.
-date: 2019-04-02
+date: 2020-04-03
 summary: When updating a model, which is made searchable using Laravel Scout, it will dispatch a MakeSearchable job. The problem here is that it also does that when a field that isn't even searchable was updated. Let's fix that!
 ---
 
