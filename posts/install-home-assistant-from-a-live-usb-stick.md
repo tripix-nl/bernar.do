@@ -24,12 +24,12 @@ Defeated and ready to throw in the towel I right clicked the HASS image which sa
 
 To summarize:
 
-- Create an Ubuntu live boot USB-stick: https://ubuntu.com/tutorials/try-ubuntu-before-you-install#1-getting-started;
-- Configure the UEFI/BIOS: https://www.home-assistant.io/installation/generic-x86-64#configure-the-bios-on-your-x86-64-hardware;
-- Boot from the Ubuntu USB-stick (in UEFI-mode) and select 'Try Ubuntu';
-- Open Firefox and download the latest release: https://www.home-assistant.io/installation/generic-x86-64#write-the-image-to-your-boot-medium or https://github.com/home-assistant/operating-system/releases/download/9.5/haos_generic-x86-64-9.5.img.xz;
-- Right click the image and follow the steps to write it to drive;
-- Run `efibootmgr --create --disk /dev/sda --part 1 --label "HAOS" --loader '\EFI\BOOT\bootx64.efi'` or check the note under https://www.home-assistant.io/installation/generic-x86-64#start-up-your-generic-x86-64;
-- Restart/reboot, remove Ubuntu USB-stick and Home Assistant should start! 
+1. Create an Ubuntu live boot USB-stick: https://ubuntu.com/tutorials/try-ubuntu-before-you-install#1-getting-started;
+2. Configure the UEFI/BIOS: https://www.home-assistant.io/installation/generic-x86-64#configure-the-bios-on-your-x86-64-hardware;
+3. Boot from the Ubuntu USB-stick (in UEFI-mode) and select 'Try Ubuntu';
+4. Open Firefox and download the latest release: https://www.home-assistant.io/installation/generic-x86-64#write-the-image-to-your-boot-medium or https://github.com/home-assistant/operating-system/releases/download/9.5/haos_generic-x86-64-9.5.img.xz;
+5. Right click the image and follow the steps to write it to drive;
+6. Run `efibootmgr --create --disk /dev/sda --part 1 --label "HAOS" --loader '\EFI\BOOT\bootx64.efi'` or check the note under https://www.home-assistant.io/installation/generic-x86-64#start-up-your-generic-x86-64;
+7. Restart/reboot, remove Ubuntu USB-stick and Home Assistant should start! 
 
 Anything I missed? Hit me up on Twitter: https://twitter.com/bernardohulsman
