@@ -1,6 +1,6 @@
 ---
 title: Install Home Assistant from a live USB stick
-date: 2023-03-22
+date: 2023-03-23
 summary: How to actually install HASS from live Ubuntu to storage on the device itself
 ---
 
@@ -18,4 +18,18 @@ As it was flashing to the mSATA drive, it would get stuck at either 27 of 36 per
 
 # To the rescue
 
-Today I decided to try again, maybe a new version of something would have fixed it. But allas, the same issue as before, no progress! 
+Today I decided to try again, maybe a new version of something would have fixed it. But allas, the same issue as before, no progress...
+
+Defeated and ready to throw in the towel I right clicked the HASS image which said something like 'open in disk image writer', which I did. Now I could again click the mSATA drive and after confirming it was simply flashing the HASS image to the new drive. No crashes, it just worked and it although it did not boot from it right away it did show up in the UEFI/BIOS. A [note in the HASS instal docs](https://www.home-assistant.io/installation/generic-x86-64#start-up-your-generic-x86-64) proved to be the solution and it just simply worked!
+
+To summarize:
+
+- Create an Ubuntu live boot USB-stick: https://ubuntu.com/tutorials/try-ubuntu-before-you-install#1-getting-started;
+- Configure the UEFI/BIOS: https://www.home-assistant.io/installation/generic-x86-64#configure-the-bios-on-your-x86-64-hardware;
+- Boot from the Ubuntu USB-stick (in UEFI-mode) and select 'Try Ubuntu';
+- Open Firefox and download the latest release: https://www.home-assistant.io/installation/generic-x86-64#write-the-image-to-your-boot-medium or https://github.com/home-assistant/operating-system/releases/download/9.5/haos_generic-x86-64-9.5.img.xz;
+- Right click the image and follow the steps to write it to drive;
+- Run `efibootmgr --create --disk /dev/sda --part 1 --label "HAOS" --loader '\EFI\BOOT\bootx64.efi'` or check the note under https://www.home-assistant.io/installation/generic-x86-64#start-up-your-generic-x86-64;
+- Restart/reboot, remove Ubuntu USB-stick and Home Assistant should start! 
+
+Anything I missed? Hit me up on Twitter: https://twitter.com/bernardohulsman
