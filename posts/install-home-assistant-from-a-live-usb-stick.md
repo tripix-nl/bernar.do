@@ -1,7 +1,7 @@
 ---
 title: Install Home Assistant from a live USB stick
 date: 2023-03-23
-summary: How to actually install HASS from live Ubuntu to storage on the device itself
+summary: How to actually install HASS from live Ubuntu to storage on the device itself, since the way the docs provide might not work.
 ---
 
 Recently I bought myself a thin client to do some tinkering and just short after my Raspberry Pi 4 (running Home Assistant) died. The SD-card probably wasn't happy with the huge amount of data written because I added [data from our P1-meter](https://www.zuidwijk.com/product/slimmelezer-plus/) at home. So instead of reinstalling HASS on the Raspberry Pi I opted using the thin client i bought. However installing HASS on it wasn't as easy as I'd hoped...
